@@ -31,7 +31,7 @@ void FillArray(string[] stringArray)
     stringArray[i] = Console.ReadLine();
   }
 }
-
+//4.Set array random size
 int GetArrayRandomSize()
 {
   Console.WriteLine("Количество элементов нового массива: ");
@@ -40,7 +40,7 @@ int GetArrayRandomSize()
   return size;
 
 }
-//
+//5. Fill new array
 void FillNewStringArray(string[] stringArray, string[] newStringArray)
 {
      Console.Write("[");
