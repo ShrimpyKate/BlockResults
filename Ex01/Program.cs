@@ -18,13 +18,43 @@ int GetArraySize()
 }
 
 //2.Create array
-string[] FirstArray(int size)
+string[] CreateArray(int size)
 {
   return new string[size];
 }
 
 //3.Fill array 
-string [] FillArray(string[]arr)
+void FillArray(string[] stringArray)
 {
+  for (int i = 0; i < stringArray.Length; i++)
+  {
+    stringArray[i] = Console.ReadLine();
+  }
+}
+
+int GetArrayRandomSize()
+{
+  Console.WriteLine("Количество элементов нового массива: ");
+  int size = Random.Shared.Next(1, 4);
+  Console.WriteLine(size);
+  return size;
   
 }
+//
+void FillNewStringArray(string[]stringArray)
+{
+  for (int i = 0; i <= 2; i++)
+  {
+    Console.WriteLine(stringArray[i]);
+  }
+}
+
+
+
+int size = GetArraySize();
+string[] stringArray = CreateArray(size);
+FillArray(stringArray);
+int newsize= GetArrayRandomSize();
+string[] newStringArray = CreateArray(newsize);
+Console.WriteLine("Новый массив строк: ");
+FillNewStringArray(stringArray);
