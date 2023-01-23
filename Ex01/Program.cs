@@ -38,23 +38,26 @@ int GetArrayRandomSize()
   int size = Random.Shared.Next(1, 4);
   Console.WriteLine(size);
   return size;
-  
+
 }
 //
-void FillNewStringArray(string[]stringArray)
+void FillNewStringArray(string[] stringArray, string[] newStringArray)
 {
-  for (int i = 0; i <= 2; i++)
+     Console.Write("[");
+  for (int i = 0; i < newStringArray.Length; i++)
   {
-    Console.WriteLine(stringArray[i]);
+    newStringArray[i] = stringArray[i];
+    if(i==newStringArray.Length -1 ) 
+    Console.Write($"{stringArray[i]}.]");
+    else Console.Write($"{stringArray[i]},");
+
   }
 }
-
-
 
 int size = GetArraySize();
 string[] stringArray = CreateArray(size);
 FillArray(stringArray);
-int newsize= GetArrayRandomSize();
+int newsize = GetArrayRandomSize();
 string[] newStringArray = CreateArray(newsize);
 Console.WriteLine("Новый массив строк: ");
-FillNewStringArray(stringArray);
+FillNewStringArray(stringArray, newStringArray);
