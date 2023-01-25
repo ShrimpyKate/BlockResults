@@ -40,7 +40,7 @@ int GetArrayRandomSize()
   return size;
 
 }
-//5. Fill new array
+//5. Fill and print new array
 void FillNewStringArray(string[] stringArray, string[] newStringArray)
 {
   Console.Write("[");
@@ -56,6 +56,7 @@ void FillNewStringArray(string[] stringArray, string[] newStringArray)
 
 int size = GetArraySize();
 string[] stringArray = CreateArray(size);
+Console.WriteLine("Введите элементы массива: ");
 FillArray(stringArray);
 int newsize = GetArrayRandomSize();
 string[] newStringArray = CreateArray(newsize);
